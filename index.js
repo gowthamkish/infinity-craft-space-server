@@ -12,6 +12,11 @@ connectDB();
 
 app.use(express.json());
 app.use(cors());
+app.use(
+  cors({
+    origin: "https://infinity-craft-space-server.vercel.app/",
+  })
+);
 
 app.get("/", (req, res) => {
   res.send("Hello world");
